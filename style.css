@@ -1,0 +1,60 @@
+
+body{
+    margin: 0;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3%;
+}
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.grid img{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1px;
+    margin-right: 1px;
+}
+
+.alert{
+    background-color: #9ff;
+    height: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.playground{
+    position: relative;
+    min-width: 400px;
+}
+
+.congrats{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.result {
+    position: absolute;
+    top: -10px;
+    text-align: center;
+    width: 100%;
+}
+
+.button-warpper{
+    margin-bottom: 20px;
+}
+button{
+    cursor: pointer;
+}

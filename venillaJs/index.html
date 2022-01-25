@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="field-group"><label for="">Choose Block Size: 
+            <select name="block-size" id="block-size">
+                <option value="2">12 (Default)</option>
+                <option value="3">24</option>
+                <option value="4">36</option>
+                <option value="5">48</option>
+                <option value="6">60</option>
+                <option value="11">120</option>
+                <option value="22">240</option>
+            </select>
+        </label></div>
+        <h3>Score: <span id="score">0</span> of <span id="total">0</span></h3>
+
+        <div class="button-warpper">
+            <button id="reset">Reset</button>
+            <button id="restartSameLevel">Restart Same Level</button>
+        </div>
+
+        <div class="alert"></div>
+
+        <div class="playground">
+            <div class="grid"></div>
+    
+            <div class="congrats"></div>
+
+            <div class="result"></div>
+        </div>
+        
+    </div>
+</body>
+</html>
