@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="vueStyle.css">
+</head>
+<body>
+    <div class="wrapper" id="app" v-cloak>
+        <h2>{{ greeting }}</h2>
+        <div class="field-group"><label for="">Choose Block Size: 
+            <select name="block-size" id="block-size" @change="chooseBlockSize">
+                <option v-for="blockValue in blockSizeArr"  :value="blockValue.value">{{ blockValue.text}}</option>
+            </select>
+        </label></div>
+        <h3>Score: <span id="score">{{cardsWon.length}}</span> of <span id="total">{{blockSize}}</span></h3>
+
+        <div class="button-warpper">
+            <button id="reset">Reset</button>
+            <button id="restartSameLevel">Restart Same Level</button>
+        </div>
+
+        <div class="alert"></div>
+
+        <div class="playground">
+            <div class="grid" :style="{width: setGridWidth + 'px'}">
+                <img v-for="(card, index) in cardArray" :src="blankCard" alt="" :data-id="index" @click="flipCard">
+            </div>
+    
+            <div class="congrats"></div>
+
+            <div class="result"></div>
+        </div>
+        
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>
